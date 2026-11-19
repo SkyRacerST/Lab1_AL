@@ -34,8 +34,18 @@ shops = {
 # }
 # Указать надо только по 2 магазина с минимальными ценами
 
-sweets = {
-    # TODO здесь ваш код
-}
+# Собираем все предложения по каждому продукту
+all_offers = {}
+for shop_name, products in shops.items():
+    for product in products:
+        all_offers.setdefault(product['name'], []).append(
+            {'shop': shop_name, 'price': product['price']}
+        )
+
+# Оставляем по 2 минимальные цены
+sweets = {}
+for name, offers in all_offers.items():
+    offers.sort(key=lambda x: x['price'])
+    sweets[name] = offers[:2]
 
 print(sweets)

@@ -15,5 +15,15 @@ sites = {
 distances = {}
 
 # TODO здесь заполнение словаря
-
+cities = list(sites.keys())
+for i in range(len(cities)):
+    for j in range(len(cities)):
+        if i == j:
+            continue
+        city_a = cities[i]
+        city_b = cities[j]
+        x1, y1 = sites[city_a]
+        x2, y2 = sites[city_b]
+        distances[f'{city_a}-{city_b}'] = ((x1 - x2) ** 2 + (y1 - y2) ** 2) ** 0.5
+        
 print(distances)
