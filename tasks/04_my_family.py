@@ -21,10 +21,19 @@ my_family_height = [
 
 # TODO здесь ваш код
 # Рост отца
-print(f'Рост отца - {my_family_height[0][1]} см')
+def father_height():
+    return f'Рост отца - {my_family_height[0][1]} см'
 
 # Общий рост семьи
-total_height = 0
-for member in my_family_height:
-    total_height += member[1]
-print(total_height)
+def total_height():
+    total_height = 0
+    for member in my_family_height:
+        total_height += member[1]
+    return total_height
+
+def run():
+    print(father_height())
+    print(total_height())
+
+if __name__ == '__main__':
+    run()

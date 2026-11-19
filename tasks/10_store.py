@@ -40,10 +40,21 @@ store = {
 #   Лампа - 27 шт, стоимость 1134 руб
 
 # TODO здесь ваш код
-for product_name, code in goods.items():
-    total_quantity = 0
-    total_cost = 0
-    for batch in store[code]:
-        total_quantity += batch['quantity']
-        total_cost += batch['quantity'] * batch['price']
-    print(f'{product_name} - {total_quantity} шт, стоимость {total_cost} руб')
+def report():
+    lines = []
+    for product_name, code in goods.items():
+        total_quantity = 0
+        total_cost = 0
+        for batch in store[code]:
+            total_quantity += batch['quantity']
+            total_cost += batch['quantity'] * batch['price']
+        lines.append(f'{product_name} - {total_quantity} шт, стоимость {total_cost} руб')
+    return lines
+
+def run():
+    for line in report():
+        print(line)
+
+
+if __name__ == '__main__':
+    run()

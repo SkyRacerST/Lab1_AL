@@ -1,31 +1,27 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# Есть список животных в зоопарке
-zoo = ['lion', 'kangaroo', 'elephant', 'monkey']
 
-# Посадите медведя (bear) между львом и кенгуру
-# и выведите список на консоль
-# TODO здесь ваш код
-zoo.insert(1, 'bear')
-print(zoo)
+def build_zoo():
+    zoo = ['lion', 'kangaroo', 'elephant', 'monkey']
+    zoo.insert(1, 'bear')
 
-# Добавьте птиц из списка birds в последние клетки зоопарка
-birds = ['rooster', 'ostrich', 'lark']
-# и выведите список на консоль
-# TODO здесь ваш код
-for bird in birds:
-	zoo.append(bird)
-print(zoo)
+    birds = ['rooster', 'ostrich', 'lark']
+    zoo.extend(birds)
 
-# Уберите слона (elephant) из зоопарка
-# и выведите список на консоль
-# TODO здесь ваш код
-zoo.pop(3)
-print(zoo)
+    zoo.remove('elephant')
 
-# Выведите на консоль в какой клетке сидит лев (lion) и жаворонок (lark).
-# Номера при выводе должны быть 1-индексированными (первая клетка - номер 1).
-# TODO здесь ваш код
-print(f'Лев сидит в клетке {zoo.index('lion') + 1}')
-print(f'Жаворонок сидит в клетке {zoo.index('lark') + 1}')
+    lion_cell = zoo.index('lion') + 1
+    lark_cell = zoo.index('lark') + 1
+    return zoo, lion_cell, lark_cell
+
+
+def run():
+    zoo, lion, lark = build_zoo()
+    print(zoo)
+    print(f"Лев сидит в клетке {lion}")
+    print(f"Жаворонок сидит в клетке {lark}")
+
+
+if __name__ == '__main__':
+    run()

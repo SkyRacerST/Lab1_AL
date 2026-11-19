@@ -20,8 +20,9 @@ violator_songs_list = [
 # Обратите внимание, что суммирование чисел с плавающей точкой может давать погрешность,
 # округлите результат до 3 знаков после запятой
 # TODO здесь ваш код
-total_l = violator_songs_list[3][1] + violator_songs_list[5][1] + violator_songs_list[-1][1]
-print(f'Три песни звучат {round(total_l, 3)} минут')
+def total_from_list():
+    total_l = violator_songs_list[3][1] + violator_songs_list[5][1] + violator_songs_list[-1][1]
+    return f'Три песни звучат {round(total_l, 3)} минут'
 
 # Есть словарь песен группы Depeche Mode
 violator_songs_dict = {
@@ -41,5 +42,13 @@ violator_songs_dict = {
 #   А другие три песни звучат ХХХ минут
 # Обратите внимание на округление
 # TODO здесь ваш код
-total_d = violator_songs_dict['Sweetest Perfection'] + violator_songs_dict['Policy of Truth'] + violator_songs_dict['Blue Dress']
-print(f'А другие три песни звучат {round(total_d, 3)} минут')
+def total_from_dict():
+    total_d = violator_songs_dict['Sweetest Perfection'] + violator_songs_dict['Policy of Truth'] + violator_songs_dict['Blue Dress']
+    return f'А другие три песни звучат {round(total_d, 3)} минут'
+
+def run():
+    print(total_from_list())
+    print(total_from_dict())
+
+if __name__ == '__main__':
+    run()
