@@ -31,9 +31,9 @@ def total_height():
         total_height += member[1]
     return total_height
 
-def run():
+def main():
     print(father_height())
     print(total_height())
 
 if __name__ == '__main__':
-    run()
+    main()

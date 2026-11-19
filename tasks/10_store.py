@@ -51,10 +51,10 @@ def report():
         lines.append(f'{product_name} - {total_quantity} шт, стоимость {total_cost} руб')
     return lines
 
-def run():
+def main():
     for line in report():
         print(line)
 
 
 if __name__ == '__main__':
-    run()
+    main()

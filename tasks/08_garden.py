@@ -16,9 +16,9 @@ def garden_analysis():
 	meadow_set = set(meadow)
 	return f"{garden_set | meadow_set}\n{garden_set & meadow_set}\n{garden_set - meadow_set}\n{meadow_set - garden_set}"
 
-def run():
+def main():
     print(garden_analysis())
 
 
 if __name__ == '__main__':
-    run()
+    main()

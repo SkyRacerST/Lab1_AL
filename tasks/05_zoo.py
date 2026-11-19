@@ -16,7 +16,7 @@ def build_zoo():
     return zoo, lion_cell, lark_cell
 
 
-def run():
+def main():
     zoo, lion, lark = build_zoo()
     print(zoo)
     print(f"Лев сидит в клетке {lion}")
@@ -24,4 +24,4 @@ def run():
 
 
 if __name__ == '__main__':
-    run()
+    main()

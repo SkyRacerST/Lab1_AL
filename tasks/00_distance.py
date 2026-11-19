@@ -27,8 +27,8 @@ def calculate_distances():
             distances[f'{city_a}-{city_b}'] = ((x1 - x2) ** 2 + (y1 - y2) ** 2) ** 0.5
     return distances
 
-def run():     
+def main():     
     print(calculate_distances())
 
 if __name__ == '__main__':
-    run()
+    main()

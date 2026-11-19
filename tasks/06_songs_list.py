@@ -46,9 +46,9 @@ def total_from_dict():
     total_d = violator_songs_dict['Sweetest Perfection'] + violator_songs_dict['Policy of Truth'] + violator_songs_dict['Blue Dress']
     return f'А другие три песни звучат {round(total_d, 3)} минут'
 
-def run():
+def main():
     print(total_from_list())
     print(total_from_dict())
 
 if __name__ == '__main__':
-    run()
+    main()

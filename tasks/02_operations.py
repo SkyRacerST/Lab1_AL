@@ -11,9 +11,9 @@
 def make_25():
 	return 1 * 2 + 3 + 4 * 5
 
-def run():
+def main():
     print(make_25())
 
 
 if __name__ == '__main__':
-    run()
+    main()

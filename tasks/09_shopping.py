@@ -49,9 +49,9 @@ def two_cheapest():
         sweets[name] = offers[:2]
     return sweets
 
-def run():
+def main():
     print(two_cheapest())
 
 
 if __name__ == '__main__':
-    run()
+    main()

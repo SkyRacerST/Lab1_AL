@@ -58,8 +58,8 @@ def run_task(number):
         print(f'[!] Не удалось импортировать {module_name}: {e}')
         return
 
-    if hasattr(module, 'run'):
-        module.run()
+    if hasattr(module, 'main'):
+        module.main()
     else:
         print(f'[!] В модуле {module_name} нет функции run()')
 

@@ -22,9 +22,9 @@ def get_movies():
 	my_favorite_movies[12:25],
 	my_favorite_movies[-22:-17])
 
-def run():
+def main():
 	for m in get_movies():
 		print(m)
 
 if __name__ == '__main__':
-    run()
+    main()
