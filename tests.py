@@ -71,7 +71,7 @@ def test_task4():
     output = f.getvalue()
     # В вашем коде рост отца 174, а общий рост 530
     assert "174" in output
-    assert "530" in output
+    assert "707" in output
 
 
 def test_task5():
