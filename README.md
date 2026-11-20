@@ -38,33 +38,33 @@ LR1/
 
 ├── tasks/                  # Пакет с заданиями
 
-│   ├── \_\_init\_\_.py         # Превращает папку в Python-пакет
+│   ├── __init__.py         # Превращает папку в Python-пакет
 
-│   ├── 00\_distance.py      # Расстояния между городами
+│   ├── 00_distance.py      # Расстояния между городами
 
-│   ├── 01\_circle.py        # Площадь круга и точки
+│   ├── 01_circle.py        # Площадь круга и точки
 
-│   ├── 02\_operations.py    # Расстановка знаков (1 2 3 4 5 = 25)
+│   ├── 02_operations.py    # Расстановка знаков (1 2 3 4 5 = 25)
 
-│   ├── 03\_favorite\_movies.py # Срезы строк (фильмы)
+│   ├── 03_favorite_movies.py # Срезы строк (фильмы)
 
-│   ├── 04\_my\_family.py     # Рост членов семьи
+│   ├── 04_my_family.py     # Рост членов семьи
 
-│   ├── 05\_zoo.py           # Операции со списками (зоопарк)
+│   ├── 05_zoo.py           # Операции со списками (зоопарк)
 
-│   ├── 06\_songs\_list.py    # Песни Depeche Mode
+│   ├── 06_songs_list.py    # Песни Depeche Mode
 
-│   ├── 07\_secret.py        # Расшифровка сообщения
+│   ├── 07_secret.py        # Расшифровка сообщения
 
-│   ├── 08\_garden.py        # Множества (цветы)
+│   ├── 08_garden.py        # Множества (цветы)
 
-│   ├── 09\_shopping.py      # Поиск минимальных цен
+│   ├── 09_shopping.py      # Поиск минимальных цен
 
-│   └── 10\_store.py         # Отчёт по складу
+│   └── 10_store.py         # Отчёт по складу
 
 ├── main.py                 # Верхнеуровневый модуль (консольное меню)
 
-├── test\_tasks.py           # Unit-тесты для всех заданий (pytest)
+├── test_tasks.py           # Unit-тесты для всех заданий (pytest)
 
 ├── requirements.txt        # Зависимости проекта
 
@@ -88,7 +88,7 @@ LR1/
 
 ```bash
 
-git clone <URL\_вашего\_репозитория>
+git clone <URL_вашего_репозитория>
 
 cd LR1
 
@@ -106,7 +106,7 @@ cd LR1
 
 python -m venv venv
 
-venv\\Scripts\\activate
+venv\Scripts\activate
 
 ```
 
@@ -136,7 +136,7 @@ pip install -r requirements.txt
 
 
 
-*(Файл `requirements.txt` содержит только `pytest>=7.0.0`, так как остальные модули — стандартная библиотека Python).\*
+*(Файл `requirements.txt` содержит только `pytest>=7.0.0`, так как остальные модули — стандартная библиотека Python).*
 
 
 
@@ -216,7 +216,7 @@ python main.py
 
 ```bash
 
-python tasks/01\_circle.py
+python tasks/01_circle.py
 
 ```
 
@@ -230,7 +230,7 @@ python tasks/01\_circle.py
 
 
 
-Тесты написаны с использованием `pytest` и находятся в едином файле `test\_tasks.py`.
+Тесты написаны с использованием `pytest` и находятся в едином файле `test_tasks.py`.
 
 
 
@@ -240,7 +240,7 @@ python tasks/01\_circle.py
 
 ```bash
 
-python -m pytest test\_tasks.py -v
+python -m pytest test_tasks.py -v
 
 ```
 
@@ -254,13 +254,13 @@ python -m pytest test\_tasks.py -v
 
 ```text
 
-test\_tasks.py::test\_task0 PASSED                                         \[  9%]
+test_tasks.py::test_task0 PASSED                                         [  9%]
 
-test\_tasks.py::test\_task1 PASSED                                         \[ 18%]
+test_tasks.py::test_task1 PASSED                                         [ 18%]
 
 ...
 
-test\_tasks.py::test\_task10 PASSED                                        \[100%]
+test_tasks.py::test_task10 PASSED                                        [100%]
 
 
 
@@ -278,11 +278,11 @@ test\_tasks.py::test\_task10 PASSED                                        \[100
 
 
 
-1. **Импорт модулей с цифрами в имени:** так как файлы заданий начинаются с цифр (например, `00\_distance.py`), стандартный `import` невозможен. В `main.py` и `test\_tasks.py` используется `importlib.import\_module('tasks.00\_distance')`.
+1. **Импорт модулей с цифрами в имени:** так как файлы заданий начинаются с цифр (например, `00_distance.py`), стандартный `import` невозможен. В `main.py` и `test_tasks.py` используется `importlib.import_module('tasks.00_distance')`.
 
-2. **Пакетирование:** папка `tasks` содержит файл `\_\_init\_\_.py`, что делает её полноценным пакетом Python.
+2. **Пакетирование:** папка `tasks` содержит файл `__init__.py`, что делает её полноценным пакетом Python.
 
-3. **Перехват вывода в тестах:** для проверки результатов в `test\_tasks.py` используется `io.StringIO` и `contextlib.redirect\_stdout`, что позволяет тестировать консольный вывод функций `main()`.
+3. **Перехват вывода в тестах:** для проверки результатов в `test_tasks.py` используется `io.StringIO` и `contextlib.redirect_stdout`, что позволяет тестировать консольный вывод функций `main()`.
 
 
 
